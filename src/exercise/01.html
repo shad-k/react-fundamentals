@@ -23,14 +23,14 @@
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
 <script type="module">
   var rootElement = document.createElement('div');
-  rootElement.id = 'root';
+  rootElement.setAttribute('id', 'root');
 
   var divElement = document.createElement('div');
   divElement.textContent = 'Hello World';
   divElement.className = 'container';
   
   rootElement.append(divElement);
-  document.body.append(rootElement);
+  document.body.append(rootElement)
 </script>
 </body>
 </html>
