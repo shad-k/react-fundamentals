@@ -10,7 +10,6 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="root"></div>
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
 <!-- These next instructions are to be written in JavaScript in the <script> tag -->
 <!-- 🐨 Create a div -->
@@ -23,12 +22,15 @@
 <!--   💰 document.getElementById('root') -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
 <script type="module">
+  var rootElement = document.createElement('div');
+  rootElement.id = 'root';
+
   var divElement = document.createElement('div');
   divElement.textContent = 'Hello World';
   divElement.className = 'container';
   
-  var rootElement = document.getElementById('root');
   rootElement.append(divElement);
+  document.body.append(rootElement);
 </script>
 </body>
 </html>
